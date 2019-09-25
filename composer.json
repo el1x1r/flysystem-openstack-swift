@@ -1,5 +1,5 @@
 {
-    "name": "mzur/flysystem-openstack-swift",
+    "name": "el1x1r/flysystem-openstack-swift",
     "description": "Flysystem adapter for OpenStack Swift",
     "keywords": [
         "filesystem", "filesystems", "files", "chrisnharvey",
@@ -18,6 +18,10 @@
         {
             "name": "Martin Zurowietz",
             "email": "martin@zurowietz.de"
+        },
+        {
+            "name": "Jorge Lipa",
+            "email": "jorge.lipa@jalasoft.com"
         }
     ],
     "autoload": {
