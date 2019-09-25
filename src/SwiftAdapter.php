@@ -320,6 +320,7 @@ class SwiftAdapter extends AbstractAdapter
             'timestamp' => $timestamp,
             'mimetype'  => reset($mimetype),
             'size'      => $object->contentLength,
+            'url'       => (string) $object->getPublicUri(),
         ];
     }
 }
