@@ -41,7 +41,9 @@ class SwiftAdapter extends AbstractAdapter
     public function write($path, $contents, Config $config, $size = 0)
     {
         $path = $this->applyPathPrefix($path);
-
+        if($size < 0) {
+            $path = $path.'/';
+        }
         $data = $this->getWriteData($path);
         $type = 'content';
 
@@ -152,6 +154,8 @@ class SwiftAdapter extends AbstractAdapter
      */
     public function createDir($dirname, Config $config)
     {
+        $this->write($dirname, null, $config, -1);
+
         return ['path' => $dirname];
     }
 
