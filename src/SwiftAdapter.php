@@ -52,6 +52,7 @@ class SwiftAdapter extends AbstractAdapter
         }
 
         $data[$type] = $contents;
+        $data['deleteAfter'] = session('deleteAfter', $config->get('deleteAfter'));
 
         // Create large object if the stream is larger than 300 MiB (default).
         if ($type === 'stream' && $size > $config->get('swiftLargeObjectThreshold', 314572800)) {
